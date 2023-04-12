@@ -21,12 +21,12 @@ public class CompanyTax extends Tax {
     public Double total(){
         Double total;
         if(getNumberOfEmployees() > 10){
-                 total = getAnual() - getAnual() * 0.14;
+                 total = getAnual() * 0.14;
           
             
         }
         else{
-             total = getAnual() -(getAnual() * 0.16);
+             total = getAnual() * 0.16;
         }
 
         return total;

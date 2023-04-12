@@ -4,7 +4,7 @@ public class IndividualTax extends Tax {
     private Double HealthExpenditures;
 
    
-    
+
     public IndividualTax(String name, Double anual, Double healthExpenditures) {
         super(name, anual);
         HealthExpenditures = healthExpenditures;
@@ -26,7 +26,7 @@ public class IndividualTax extends Tax {
 
         }
         else{
-            total = getAnual() - (0.25 * getAnual()) - (getHealthExpenditures() * 0.5);
+            total = 0.25 * getAnual() - (getHealthExpenditures() * 0.5);
         }
         return total;
 
@@ -34,10 +34,10 @@ public class IndividualTax extends Tax {
     }
 
     public String toString(){
-        StringBuilder sb = new StringBuilder();
-        sb.append(getName() +": $ "+ total());
+        
+        
 
-        return sb.toString();
+        return " "+ getName() + String.format(": $ %.2f", total());
 
         
     }

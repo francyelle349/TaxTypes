@@ -42,10 +42,13 @@ public class Program {
 
 
         }
-        
+        Double sum = 0.0;
         for(Tax tax : lista){
          System.out.println(tax);
+         sum += tax.total();
         }
+
+        System.out.println("TOTAL TAXES: $"+ sum);
 
         sc.close();
 
